@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haritham - Waste Management</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5DC; /* Earthy beige background */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2E7D32; /* Dark green */
+            color: white;
+            padding: 30px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        /* Content Section */
+        .content {
+            margin-top: 120px; /* Space below fixed header */
+            padding: 40px;
+            flex: 1;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            color: #2E7D32; /* Dark green */
+        }
+
+        /* Sub Hashtag */
+        .sub-hashtag {
+            font-size: 1.1rem;
+            color: #2E7D32; /* Dark green */
+            font-weight: bold;
+            margin-top: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Buttons Section */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .button {
+            display: block;
+            padding: 18px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
+            background-color: #5D4037; /* Earthy brown */
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            margin: 20px 0; /* Increased space between buttons */
+            width: 100%;
+            max-width: 400px; /* Wider rectangular shape */
+            text-align: center;
+        }
+
+        .button:hover, .button:focus {
+            background-color: #388E3C; /* Brighter green */
+            outline: 2px solid #2E7D32;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2E7D32; /* Dark green */
+            color: white;
+            padding: 15px;
+            font-size: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                font-size: 1.8rem;
+                padding: 20px;
+            }
+
+            .content h1 {
+                font-size: 1.6rem;
+            }
+
+            .sub-hashtag {
+                font-size: 1rem;
+            }
+
+            .button {
+                font-size: 1.2rem;
+                padding: 15px;
+                max-width: 350px; /* Adjusted for smaller screens */
+            }
+
+            .footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">HARITHAM</div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>WELCOME TO HARITHAM</h1>
+        <p class="sub-hashtag">For A Cleaner Greener Kerala</p>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <a class="button" href="user.html" role="button" tabindex="0">User</a>
+            <a class="button" href="waste-collector.html" role="button" tabindex="0">Waste Collector</a>
+            <a class="button" href="admin.html" role="button" tabindex="0">Admin</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">© 2025 Haritham. All Rights Reserved.</div>
+
+</body>
+</html>
