@@ -1,0 +1,153 @@
+/* Resetting margin, padding, and box-sizing to create a uniform base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Overall body setup with full height and flex display */
+body {
+    display: flex;
+    height: 100vh;
+    background: #e6ddc4;
+    padding: 20px;
+}
+
+/* Sidebar styling with background color, padding, and positioning */
+.sidebar {
+    width: 250px;
+    background: #e7d3b2eb;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Styling for the menu items inside the sidebar */
+.menu-item {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    background: #5D4037;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect on sidebar menu items */
+.menu-item:hover {
+    background: #e7d3b2eb;
+}
+
+/* Main content area setup with left padding to make space for the sidebar */
+.main-content {
+    flex: 1;
+    padding-left: 270px; /* Ensures content isn't hidden behind the sidebar */
+    padding-top: 20px;
+}
+
+/* Header for the complaints page with background color and text styling */
+.complaints-header {
+    background: #5D4037;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Main container for the complaint section with a light background, rounded corners, and shadow */
+.complaints-container {
+    background: #e7d3b2eb;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling for the complaint form with spacing between elements */
+.complaint-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Textarea input for complaint text with padding, border, and resizing enabled */
+.complaint-input {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1.5px solid #5D4037;
+    border-radius: 8px;
+    resize: vertical; /* Allows vertical resizing of the textarea */
+    font-size: 16px;
+    background: white;
+}
+
+/* Focus state for the complaint input field */
+.complaint-input:focus {
+    outline: none;
+    border-color: #2E7D32; /* Changes border color when focused */
+}
+
+/* Send button styling with hover effect and alignment */
+.send-button {
+    padding: 12px 25px;
+    background: #5D4037;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    align-self: flex-end; /* Aligns the button to the right */
+}
+
+/* Hover effect on the send button */
+.send-button:hover {
+    background: #4a332c;
+}
+
+/* List container for displaying submitted complaints */
+.complaints-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual complaint item styling */
+.complaint-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #5D4037;
+}
+
+/* Styling for the time displayed on each complaint item */
+.complaint-time {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Success message box styling */
+.success-message {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: none; /* Hidden by default */
+}

@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #e6ddc4;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background: #e7d3b2eb;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu-item {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    background: #5D4037;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background: #e7d3b2eb;
+}
+
+.main-content {
+    flex: 1;
+    padding-left: 270px;
+    padding-top: 20px;
+}
+
+.schedule-header {
+    background: #5D4037;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.calendar-container {
+    background: #e7d3b2eb;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: #5D4037;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 5px;
+    background: #5D4037;
+    color: white;
+    border-radius: 5px;
+}
+
+.date-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: default;
+    background: #ff4444;
+    color: white;
+    transition: 0.3s;
+}
+
+.schedule-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.time-slot select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.legend {
+    display: none;
+}
+
+.schedule-container {
+    display: none;
+}
+
+.waste-types {
+    display: none;
+}
+
+.schedule-info {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #5D4037;
+    margin-bottom: 30px;
+}
+
+.waste-type {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: white;
+    font-weight: bold;
+}
+
+.waste-type:hover {
+    transform: scale(1.05);
+}
+
+.waste-type.plastic {
+    background-color: #FFD700;
+    color: black;
+}
+
+.waste-type.leather {
+    background-color: #000000;
+}
+
+.waste-type.glass {
+    background-color: #87CEEB;
+    color: black;
+}
+
+.waste-type.ewaste {
+    background-color: #ed0707;
+    color: black;
+}
+
+.waste-type.cloth {
+    background-color: #00008B;
+}
+
+.waste-type.medical {
+    background-color: #FFC0CB;
+    color: black;
+}
+
+.waste-type.footwear {
+    background-color: #008000;
+}
+
+.waste-type.medical-strip {
+    background-color: #800080;
+}
+
+.selected {
+    border: 2px solid #5D4037;
+    box-shadow: 0 0 10px rgba(93, 64, 55, 0.3);
+}

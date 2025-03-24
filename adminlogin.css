@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color: #5D4037;
+    --primary-dark: #2E7D32;
+    --secondary-color: #757575;
+    --background-color:#F5F5DC;
+    --text-color: #2E7D32;
+    --border-color: #E0E0E0;
+    --error-color: #FF5252;
+    --input-background: #F5F5DC;
+}
+
+body {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    margin: 100px;
+}
+
+.login-card {
+    background: #e7d3b2eb;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.illustration {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.illustration img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 34px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.input-group .input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #757575;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 36px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(93, 64, 55, 0.3);
+}
+
+.forgot-password {
+    text-align: right;
+    margin: 8px 0 15px;
+}
+
+.forgot-password a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: var(--primary-dark);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #5D4037;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+}
+
+.google-signin {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.google-btn:hover {
+    background-color: #f8f8f8;
+    border-color: #dadce0;
+}
+
+.signup-link {
+    text-align: center;
+    color: #757575;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: var(--primary-dark);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
+
+    .illustration img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Add this at the end of your existing CSS */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #5D4037;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background: #e6ddc4;
+    transform: scale(1.1);
+}
+
+.home-button i {
+    font-size: 24px;
+}

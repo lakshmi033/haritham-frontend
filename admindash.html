@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admindash.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-item" id="dashboard">Dashboard</div>
+        <a href="adminprofile.html" class="menu-link">
+            <div class="menu-item">Profile</div>
+        </a>
+        <a href="adminsettings.html" class="menu-link">
+            <div class="menu-item">Settings</div>
+        </a>
+        <a href="adminlogout.html" class="menu-link">
+            <div class="menu-item">Logout</div>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="dashboard-header">
+            Admin Dashboard
+        </div>
+
+        <div class="admin-buttons">
+            <!-- Monitoring Button -->
+            <a href="adminmonitor.html" class="admin-link">
+                <div class="admin-button" id="monitoring-button">
+                    <i class="material-icons">monitoring</i>
+                    <h3>Monitoring</h3>
+                    <p>Monitor waste collection schedules and routes</p>
+                </div>
+            </a>
+
+            <!-- Payment Check Button -->
+            <a href="adminpayment.html" class="admin-link">
+                <div class="admin-button" id="payment-check-button">
+                    <i class="material-icons">payments</i>
+                    <h3>Payment Check</h3>
+                    <p>Review and verify user payments</p>
+                </div>
+            </a>
+
+            <!-- Complaints Check Button -->
+            <a href="admincomplaint.html" class="admin-link">
+                <div class="admin-button" id="complaints-check-button">
+                    <i class="material-icons">report_problem</i>
+                    <h3>Complaints Check</h3>
+                    <p>View and manage user complaints</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="admindash.js"></script>
+</body>
+</html>

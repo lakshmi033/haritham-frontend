@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints</title>
+    <link rel="stylesheet" href="usercomplaint.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-item" onclick="window.location.href='wastedash.html'">Dashboard</div>
+        <div class="menu-item" onclick="navigateToProfile()">Profile</div>
+        <div class="menu-item" onclick="navigateToSettings()">Settings</div>
+        <div class="menu-item">Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="complaints-header">
+            Complaints
+        </div>
+
+        <div class="complaints-container">
+            <div id="successMessage" class="success-message">
+                Complaint submitted successfully!
+            </div>
+            
+            <div class="complaint-form">
+                <textarea 
+                    class="complaint-input" 
+                    placeholder="Type your complaint here..."
+                    id="complaintText"
+                ></textarea>
+                <button class="send-button" onclick="submitComplaint()">Send</button>
+            </div>
+
+            <div class="complaints-list" id="complaintsList">
+                <!-- Previous complaints will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="usercomplaint.js"></script> <!-- Link to the JS file -->
+</body>
+</html>

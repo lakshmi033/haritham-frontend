@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="userpay.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Profile</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="payment-header">
+            Payment
+        </div>
+
+        <div class="payment-container">
+            <div class="payment-status">
+                <h3 class="status-header">Current Month Payment Status</h3>
+                <div class="status-amount">₹50.00</div>
+                <div id="paymentStatus" class="status-label status-pending">PAYMENT PENDING</div>
+            </div>
+
+            <button id="payButton" class="payment-button" onclick="makePayment()">
+                Pay Now - ₹50
+            </button>
+        </div>
+    </div>
+
+    <!-- Add Payment Modal -->
+    <div id="paymentModal" class="payment-modal">
+        <div class="modal-content">
+            <h2 style="text-align: center; color: #5D4037; margin-bottom: 20px;">Select Payment Method</h2>
+            
+            <div class="payment-options">
+                <div class="payment-option" onclick="showUPISection()">
+                    <img src="upi-icon.png" alt="UPI">
+                    <div>UPI Payment</div>
+                </div>
+                <div class="payment-option" onclick="showUPISection()">
+                    <img src="bank-icon.png" alt="Bank">
+                    <div>Net Banking</div>
+                </div>
+            </div>
+
+            <div id="upiSection" class="upi-section">
+                <h3 style="color: #5D4037;">Enter UPI ID</h3>
+                <input type="text" class="upi-input" placeholder="yourname@upi" id="upiInput">
+                
+                <div class="modal-buttons">
+                    <button class="modal-button cancel-btn" onclick="closePaymentModal()">Cancel</button>
+                    <button class="modal-button proceed-btn" onclick="processUPIPayment()">Pay ₹50</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="userpay.js"></script>
+</body>
+</html>

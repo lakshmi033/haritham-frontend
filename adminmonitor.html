@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Monitoring</title>
+    <link rel="stylesheet" href="adminmonitor.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Profile</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            Waste Collection Monitoring
+        </div>
+
+        <div class="monitoring-container">
+            <!-- Statistics Section -->
+            <div class="stats-section">
+                <h2>Collection Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Collections Today</h3>
+                        <div class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Collectors</h3>
+                        <div class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Pending Collections</h3>
+                        <div class="stat-value">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Completed Routes</h3>
+                        <div class="stat-value">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection Progress Section -->
+            <div class="progress-section">
+                <h2>Collection Progress by Waste Type</h2>
+                <div class="progress-grid">
+                    <div class="progress-card">
+                        <h3>Plastic Waste</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                    <div class="progress-card">
+                        <h3>Glass Waste</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                    <div class="progress-card">
+                        <h3>Medical Waste</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                    <!-- Add more progress cards for other waste types -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="adminmonitor.js"></script>
+</body>
+</html>

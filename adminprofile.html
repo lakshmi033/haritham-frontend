@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="adminprofile.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="admindash.html" class="menu-link">
+            <div class="menu-item">Dashboard</div>
+        </a>
+        <div class="menu-item active">Profile</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Profile Section -->
+        <div class="profile-container">
+            <div class="illustration">
+                <img src="Screenshot 2025-02-17 230841.png" alt="Eco Worker">
+            </div>
+            <h2>Profile</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" value=" " disabled>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" value=" " disabled>
+            
+            <label for="panchayat">Panchayat:</label>
+            <input type="text" id="panchayat" value=" " disabled>
+            
+            <button onclick="toggleEditMode()">Edit</button>
+        </div>
+    </div>
+
+    <script src="adminprofile.js"></script>
+
+</body>
+</html>

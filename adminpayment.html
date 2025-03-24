@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Payment Check</title>
+    <link rel="stylesheet" href="adminpayment.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Profile</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            Payment Status Check
+        </div>
+
+        <div class="payment-buttons">
+            <button class="status-btn paid-btn" onclick="showPaidList()">Paid</button>
+            <button class="status-btn unpaid-btn" onclick="showUnpaidList()">Unpaid</button>
+        </div>
+
+        <!-- Paid Users List (Initially Hidden) -->
+        <div class="list-container" id="paidList" style="display: none;">
+            <h2>Paid Users List</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by house number or name...">
+                <button class="search-btn">Search</button>
+            </div>
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>House Number</th>
+                        <th>Guardian Name</th>
+                        <th>House Name</th>
+                        <th>Payment Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Unpaid Users List (Initially Hidden) -->
+        <div class="list-container" id="unpaidList" style="display: none;">
+            <h2>Unpaid Users List</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by house number or name...">
+                <button class="search-btn">Search</button>
+            </div>
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>House Number</th>
+                        <th>Guardian Name</th>
+                        <th>House Name</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="adminpayment.js"></script>
+</body>
+</html>

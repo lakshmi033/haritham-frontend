@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="signup.css">
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB3kXb2QjqZXog0Q3MGwvKgvOv__1Ok1ec",  // Your Firebase API Key
+            authDomain: "haritham-82959.firebaseapp.com",       // Your Firebase Auth Domain
+            projectId: "haritham-82959",                        // Your Firebase Project ID
+            storageBucket: "haritham-82959.firebasestorage.app", // Your Firebase Storage Bucket
+            messagingSenderId: "382564457309",                 // Your Firebase Sender ID
+            appId: "1:382564457309:web:d7cd49f499929f16dca6b4", // Your Firebase App ID
+            measurementId: "G-TM1K6T5DGW"                       // Your Firebase Measurement ID
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Handle sign-up form submission
+        document.getElementById("signupForm").addEventListener("submit", (event) => {
+            event.preventDefault();  // Prevent form from reloading page
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Create a new user with email and password
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log("User created:", user.email);
+                    alert("Account created successfully!");
+                    // Redirect to login page after successful sign-up
+                    window.location.href = "login.html";  // Redirect to login page
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log("Error code:", errorCode);
+                    console.log("Error message:", errorMessage);
+                    alert("Error: " + errorMessage);
+                });
+        });
+    </script>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <div class="illustration">
+                <img src="logo.png" alt="Eco Worker">
+            </div>
+            <h1>Sign Up</h1>
+            <form id="signupForm">
+                <div class="input-group">
+                    <span class="input-icon">📧</span>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to external JS (signup.js if you still have any other logic) -->
+    <script src="signup.js"></script>
+</body>
+</html>

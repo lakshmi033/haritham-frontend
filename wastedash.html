@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="wastedash.css">
+    <!-- Add HTML5 QR Code Scanner library -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+    <!-- QR Code Scanner Button -->
+    <button class="qr-scan-button" onclick="startScanner()">
+        <i class="material-icons">qr_code_scanner</i>
+        Scan QR Code
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="menu-item" onclick="window.location.href='wastedash.html'">Dashboard</div>
+        <div class="menu-item" onclick="navigateToProfile()">Profile</div>
+        <div class="menu-item" onclick="navigateToSettings()">Settings</div>
+        <div class="menu-item" onclick="window.location.href='wastelogout.html'">Logout</div>
+    </div>
+    
+    <!-- Dashboard Content -->
+    <div class="dashboard">
+        <div class="row">
+            <div class="widget" onclick="window.location.href='wastenotification.html'">Notifications</div>
+            <div class="widget" onclick="navigateToSchedules()">Schedules</div>
+        </div>
+        <div class="row">
+            <div class="widget" onclick="window.location.href='ward_details.html'">Ward & Details</div>
+            <div class="widget" onclick="window.location.href='wastecomplaint.html'">Complaints</div>
+        </div>
+    </div>
+
+    <!-- QR Code Scanner Overlay -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- QR Scanner Container -->
+    <div class="qr-scanner-container">
+        <div id="qr-reader"></div>
+        <button class="close-scanner" onclick="closeScanner()">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+
+    <!-- Scan Success Message -->
+    <div class="scan-success" id="scanSuccess">
+        <h3>QR Code Scanned Successfully!</h3>
+        <p id="scannedData"></p>
+        <button onclick="closeScanner()">Close</button>
+    </div>
+
+    <script src="wastedash.js"></script>
+</body>
+</html>

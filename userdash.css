@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #e6ddc4; /* Light earthy tone */
+}
+
+.sidebar {
+    width: 250px;
+    background: #e7d3b2eb; /* Earthy green */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    background: #5D4037; /* Medium brown */
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background: #e7d3b2eb; /* Dark green */
+}
+
+.dashboard {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.widget {
+    width: 200px;
+    height: 150px;
+    background: #5D4037; /* Earthy brown */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white; /* Text color updated to white */
+    transition: 0.3s;
+}
+
+.widget:hover {
+    background: #e6ddc4; /* Earthy green */
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

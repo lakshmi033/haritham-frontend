@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward Details & Payment Status</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="ward_details.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Profile</div>
+        <div class="menu-item">Settings</div>
+        <div class="menu-item">Logout</div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <header>
+                <h1>Ward Details & Payment Status</h1>
+            </header>
+
+            <div class="wards-container">
+                <div class="ward-buttons">
+                    <button onclick="showWardDetails(1)">WARD 1</button>
+                    <button onclick="showWardDetails(2)">WARD 2</button>
+                    <button onclick="showWardDetails(3)">WARD 3</button>
+                    <button onclick="showWardDetails(4)">WARD 4</button>
+                    <button onclick="showWardDetails(5)">WARD 5</button>
+                </div>
+            </div>
+
+            <div class="details-container" id="wardDetailsContainer">
+                <h2 id="wardTitle"></h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by House No. or Name...">
+                </div>
+                <table id="wardTable">
+                    <thead>
+                        <tr>
+                            <th>House No.</th>
+                            <th>House Name</th>
+                            <th>Guardian Name</th>
+                            <th>Payment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wardTableBody">
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="ward_details.js"></script>
+</body>
+</html>

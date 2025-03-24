@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="usersetting.css"> <!-- Link to the CSS file -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="userdash.html" class="menu-item">Dashboard</a>
+        <a href="profile.html" class="menu-item">Profile</a>
+        <a href="usersetting.html" class="menu-item">Settings</a>
+        <div class="menu-item" onclick="handleLogout()">Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="settings-container">
+            <h2>Settings</h2>
+
+            <!-- Password Settings -->
+            <div class="settings-section">
+                <h3>Change Password</h3>
+                <label for="currentPassword">Current Password:</label>
+                <input type="password" id="currentPassword" required>
+                
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" required>
+                
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" id="confirmPassword" required>
+                
+                <button onclick="updatePassword()">Update Password</button>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="settings-section">
+                <h3>Notifications</h3>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="emailNotif" checked>
+                    <label for="emailNotif">Email Notifications</label>
+                </div>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="smsNotif">
+                    <label for="smsNotif">SMS Notifications</label>
+                </div>
+            </div>
+
+            <!-- Collection Preferences -->
+            <div class="settings-section">
+                <h3>Collection Preferences</h3>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="reminderAlert" checked>
+                    <label for="reminderAlert">Pickup Reminders</label>
+                </div>
+            </div>
+
+            <button onclick="saveSettings()">Save All Settings</button>
+            <div id="successMessage" class="success-message" style="display: none;">Settings saved successfully!</div>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="usersetting.js"></script> <!-- Link to the JS file -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="userdash.html" class="menu-item">Dashboard</a>
+        <a href="profile.html" class="menu-item">Profile</a>
+        <a href="usersetting.html" class="menu-item">Settings</a>
+        <a href="logout.html" class="menu-item">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Profile Section -->
+        <div class="profile-container">
+            <h2>Profile</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" value=" " disabled>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" value=" " disabled>
+            
+            <label for="place">Place:</label>
+            <input type="text" id="place" value=" " disabled>
+            
+            <label for="ward">Ward:</label>
+            <input type="text" id="ward" value=" " disabled>
+            
+            <!-- Edit Button -->
+            <button id="editButton" onclick="toggleEditMode()">Edit</button>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>
